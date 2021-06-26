@@ -23,12 +23,35 @@ body {
 /* Menu */
 .menu {
   background-color: #252525;
+  padding: 15px 0;
+}
+
+.menu-nav ul {
+  float: right;
+}
+
+.menu-nav ul li {
+  display: inline-block;
 }
 
 .menu-nav a {
   text-decoration: none;
   color: #fff;
   font-size: 1.125em;
+  display: block;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+@media (max-width: 739px){
+  .menu-nav ul {
+    float: none;
+  }
+  .menu-nav ul li a {
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 8px;
+  }
 }
 
 /* Intro */
@@ -37,6 +60,8 @@ body {
   background: url("../img/bg-intro.jpg") no-repeat center center;
   background-size: cover;
   color: #FFF;
+  padding: 150px 0;
+  text-align: center;
 }
 
 .intro h1 {
@@ -49,6 +74,7 @@ body {
   display: block;
   width: 20px;
   height: 4px;
+  margin: 10px auto;
   background-color: #FFF;
 
 }
@@ -56,6 +82,12 @@ body {
 .intro p{
   font-style: italic;
   font-size: 1.125rem;
+}
+
+@media (max-width: 739px){
+  .intro {
+    padding: 60px 0;
+  }
 }
 
 /* Sobre */
