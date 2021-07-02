@@ -23,6 +23,7 @@ body {
 /* Menu */
 .menu {
   background-color: #252525;
+  padding: 15px 0;
 }
 
 .menu-nav a {
@@ -31,17 +32,46 @@ body {
   font-size: 1.125em;
 }
 
+.menu-nav ul {
+  float: right;
+  list-style: none;
+  display: flex;
+}
+
+/* .menu-nav ul li {
+  display: inline-block;
+} */
+
+.menu-nav ul li a {
+  display: inline-block;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px){
+  .menu-nav ul {
+    float: none;
+  }
+  .menu-nav ul li a {
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+}
+
 /* Intro */
 
 .intro {
   background: url("../img/bg-intro.jpg") no-repeat center center;
   background-size: cover;
   color: #FFF;
+  text-align: center;
+  padding: 150px 0;
 }
 
 .intro h1 {
   text-transform: uppercase;
   font-size: 3rem;
+  font-weight: bold;
 }
 
 .intro h1::after {
@@ -50,6 +80,7 @@ body {
   width: 20px;
   height: 4px;
   background-color: #FFF;
+  margin: 20px auto;
 
 }
 
@@ -58,10 +89,24 @@ body {
   font-size: 1.125rem;
 }
 
+@media (max-width: 768px){
+  .intro {
+    padding: 60px 0;
+  }
+}
+
 /* Sobre */
 
+.sobre {
+  /* padding: 60px 0; */  
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .sobre h2 {
   font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .sobre-item h3 {
@@ -74,6 +119,8 @@ body {
   font-weight: normal;
   position: relative;
   top: -25px;
+  width: 220px;
+  padding: 5px 0 10px 0;
 }
 
 .sobre > p {
@@ -81,6 +128,9 @@ body {
   line-height: 1.4em;
   font-style: italic;
   text-align: center;
+  max-width: 460px;
+  text-align: center;
+  margin: 20px auto;
 }
 
 
@@ -88,11 +138,24 @@ body {
 
 .produtos {
   background-color: #e7e4d8;
+  border-top: 3px solid #d6d3c8;
+  border-bottom: 3px solid #d6d3c8;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  /* padding: 60px 0; */
+}
+
+.produtos-item {
+  margin-bottom: 40px;
 }
 
 
 .produtos-item h2 {
   font-size: 2.25em;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 .produtos-item h2::before {
@@ -104,6 +167,7 @@ body {
   border-radius: 50%;
   border: 5px solid #e7e4d8;
   box-shadow: 0 0 0 10px currentColor;
+  margin: 20px auto;
 }
 
 h2.produtos-paulista::before {
@@ -131,17 +195,39 @@ h2.produtos-mineiro::before {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+  display: block;
+  width: 180px;
+  margin: 20px auto 0 auto;
+  padding: 15px 0;
+}
+
+.produtos-btn:hover{
+  text-decoration: none;
+  color: #c17139;
+  border-color: #c17139;
 }
 
 /* Locais */
+.locais {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 
 .locais-item h2 {
   font-size: 2.25em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.locais-item {
+  margin-bottom: 40px;
 }
 
 .locais-item p {
   font-size: 1.125em;
   line-height: 1.4em;
+  max-width: 320px;
+  margin-bottom: 20px;
 }
 
 .locais-item a {
@@ -150,16 +236,20 @@ h2.produtos-mineiro::before {
   text-decoration: none;
   border: 3px solid;
   color: #252525;
+  padding: 10px 20px;
 }
 
 /* Assine */
 
 .assine {
   background: #e7e4d8;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .assine-info h2 {
   font-size: 2.25em;
+  font-weight: bold;
 }
 
 .assine-info p {
@@ -167,19 +257,29 @@ h2.produtos-mineiro::before {
   font-style: italic;
 }
 
+.assine form {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
 .assine form label{
   display: none;
 }
 
 .assine input {
+  align-self: flex-start;
   border: 3px solid #252525;
   background: none;
   font-size: 1.5em;
   font-style: italic;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 10px;
 }
 
 .assine button {
+  align-self: flex-start;
   background: #252525;
   border: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -187,15 +287,29 @@ h2.produtos-mineiro::before {
   font-size: 1.5em;
   color: #fff;
   cursor: pointer;
+  padding: 13px;
 }
 
 /* Footer */
 
 .footer {
   background: #d6d3c8;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .footer p {
   font-size: 1.125em;
   line-height: 1.4em;
+}
+
+.footer img{
+  float: right;
+}
+
+@media (max-width: 768px){
+  .footer img {
+    float: none;
+    margin-top: 20px;
+  }
 }
